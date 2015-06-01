@@ -37,5 +37,5 @@ Data$Activity <- factor(Data$Activity , labels = activity_lab$V2)
 
 #Summarizing to get Tidy Data
 Data_Tidy <- aggregate (.~Activity + Subject , Data , mean)
-Data-Tidy <- arrange(Data_Tidy ,Subject , Activity )
+Data_Tidy <- arrange(Data_Tidy ,Subject , Activity )
 write.table (Data_Tidy , "./TidyData.txt" , row.names = F)
